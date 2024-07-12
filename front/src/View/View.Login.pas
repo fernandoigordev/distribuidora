@@ -8,10 +8,10 @@ uses
   Vcl.StdCtrls, Vcl.Buttons;
 
 type
-  TLoginView = class(TForm)
-    PanelLeft: TPanel;
-    PanelRight: TPanel;
-    Image1: TImage;
+  TFormViewLogin = class(TForm)
+    PanelEsquerdo: TPanel;
+    PanelDireito: TPanel;
+    ImageLogo: TImage;
     LabelSignIn: TLabel;
     PanelSignIn: TPanel;
     PanelLogin: TPanel;
@@ -27,7 +27,7 @@ type
     LabelForgotPassword: TLabel;
     PanelButtonLogin: TPanel;
     ShapeButtonLogin: TShape;
-    LabelButtonLogin: TLabel;
+    SpeedButtonLogin: TSpeedButton;
   private
     { Private declarations }
   public
@@ -35,7 +35,7 @@ type
   end;
 
 var
-  LoginView: TLoginView;
+  FormViewLogin: TFormViewLogin;
 
 implementation
 

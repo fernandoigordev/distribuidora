@@ -1,4 +1,4 @@
-object LoginView: TLoginView
+object FormViewLogin: TFormViewLogin
   Left = 0
   Top = 0
   BorderIcons = [biSystemMenu]
@@ -32,7 +32,7 @@ object LoginView: TLoginView
     ExplicitWidth = 65
     ExplicitHeight = 65
   end
-  object PanelLeft: TPanel
+  object PanelEsquerdo: TPanel
     AlignWithMargins = True
     Left = 3
     Top = 30
@@ -42,11 +42,11 @@ object LoginView: TLoginView
     Margins.Bottom = 30
     Align = alLeft
     BevelOuter = bvNone
-    Caption = 'PanelLeft'
+    Caption = 'PanelEsquerdo'
     Color = 6856462
     ParentBackground = False
     TabOrder = 0
-    object Image1: TImage
+    object ImageLogo: TImage
       Left = 97
       Top = 127
       Width = 201
@@ -22008,7 +22008,7 @@ object LoginView: TLoginView
       Proportional = True
     end
   end
-  object PanelRight: TPanel
+  object PanelDireito: TPanel
     AlignWithMargins = True
     Left = 418
     Top = 30
@@ -22118,8 +22118,7 @@ object LoginView: TLoginView
         Font.Name = 'Tahoma'
         Font.Style = [fsBold]
         ParentFont = False
-        ExplicitLeft = 227
-        ExplicitTop = 167
+        ExplicitLeft = 224
         ExplicitWidth = 123
       end
       object PanelPassword: TPanel
@@ -22244,7 +22243,7 @@ object LoginView: TLoginView
           ExplicitWidth = 65
           ExplicitHeight = 65
         end
-        object LabelButtonLogin: TLabel
+        object SpeedButtonLogin: TSpeedButton
           AlignWithMargins = True
           Left = 3
           Top = 3
@@ -22252,17 +22251,18 @@ object LoginView: TLoginView
           Height = 47
           Cursor = crHandPoint
           Align = alClient
-          Alignment = taCenter
           Caption = 'Login'
+          Flat = True
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWhite
           Font.Height = -16
-          Font.Name = 'Tahoma'
+          Font.Name = 'Roboto'
           Font.Style = [fsBold]
           ParentFont = False
-          Layout = tlCenter
-          ExplicitWidth = 44
-          ExplicitHeight = 19
+          ExplicitLeft = 144
+          ExplicitTop = 16
+          ExplicitWidth = 23
+          ExplicitHeight = 22
         end
       end
     end

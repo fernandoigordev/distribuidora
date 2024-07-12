@@ -1,0 +1,232 @@
+inherited FormTelaCadastroView: TFormTelaCadastroView
+  Caption = 'Tela Cadastro'
+  ClientHeight = 341
+  Color = clWhite
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  ExplicitHeight = 380
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PageControlCadastro: TPageControl
+    Left = 0
+    Top = 0
+    Width = 754
+    Height = 341
+    ActivePage = TabSheetPesquisa
+    Align = alClient
+    MultiLine = True
+    TabOrder = 0
+    object TabSheetCadastro: TTabSheet
+      Caption = 'TabSheetCadastro'
+      DoubleBuffered = False
+      ParentDoubleBuffered = False
+      TabVisible = False
+      Touch.ParentTabletOptions = False
+      Touch.TabletOptions = [toPressAndHold]
+      object ScrollBoxCadastro: TScrollBox
+        Left = 0
+        Top = 0
+        Width = 746
+        Height = 281
+        Align = alClient
+        BevelInner = bvNone
+        BevelOuter = bvNone
+        BorderStyle = bsNone
+        TabOrder = 0
+      end
+      object PanelCadastro: TPanel
+        Left = 0
+        Top = 281
+        Width = 746
+        Height = 50
+        Align = alBottom
+        BevelOuter = bvNone
+        Color = clWhite
+        ParentBackground = False
+        ShowCaption = False
+        TabOrder = 1
+        object PanelSalvar: TPanel
+          AlignWithMargins = True
+          Left = 447
+          Top = 5
+          Width = 140
+          Height = 40
+          Margins.Top = 5
+          Margins.Right = 8
+          Margins.Bottom = 5
+          Align = alRight
+          Color = 6856462
+          ParentBackground = False
+          ShowCaption = False
+          TabOrder = 0
+          object SpeedButtonSalvar: TSpeedButton
+            Left = 1
+            Top = 1
+            Width = 138
+            Height = 38
+            Cursor = crHandPoint
+            Align = alClient
+            Caption = 'Salvar'
+            Flat = True
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            OnClick = SpeedButtonSalvarClick
+            ExplicitLeft = 80
+            ExplicitTop = 8
+            ExplicitWidth = 23
+            ExplicitHeight = 22
+          end
+        end
+        object PanelCancelar: TPanel
+          AlignWithMargins = True
+          Left = 598
+          Top = 5
+          Width = 140
+          Height = 40
+          Margins.Top = 5
+          Margins.Right = 8
+          Margins.Bottom = 5
+          Align = alRight
+          Color = clMaroon
+          ParentBackground = False
+          ShowCaption = False
+          TabOrder = 1
+          object SpeedButtonCanelcelar: TSpeedButton
+            Left = 1
+            Top = 1
+            Width = 138
+            Height = 38
+            Cursor = crHandPoint
+            Align = alClient
+            Caption = 'Cancelar'
+            Flat = True
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            OnClick = SpeedButtonCanelcelarClick
+            ExplicitLeft = 121
+          end
+        end
+      end
+    end
+    object TabSheetPesquisa: TTabSheet
+      Caption = 'TabSheetPesquisa'
+      ImageIndex = 1
+      TabVisible = False
+      object PanelPesquisaTop: TPanel
+        AlignWithMargins = True
+        Left = 3
+        Top = 3
+        Width = 740
+        Height = 57
+        Align = alTop
+        BevelOuter = bvNone
+        ShowCaption = False
+        TabOrder = 0
+        object LabelCodigoPesq: TLabel
+          Left = 7
+          Top = 1
+          Width = 39
+          Height = 16
+          Caption = 'C'#243'digo'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object Edit1CodigoPesq: TEdit
+          Left = 7
+          Top = 23
+          Width = 554
+          Height = 24
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+          TabOrder = 0
+        end
+        object PanelNovo: TPanel
+          AlignWithMargins = True
+          Left = 592
+          Top = 10
+          Width = 140
+          Height = 37
+          Margins.Top = 10
+          Margins.Right = 8
+          Margins.Bottom = 10
+          Align = alRight
+          Color = 6856462
+          ParentBackground = False
+          ShowCaption = False
+          TabOrder = 1
+          object SpeedButtonNovo: TSpeedButton
+            Left = 1
+            Top = 1
+            Width = 138
+            Height = 35
+            Cursor = crHandPoint
+            Align = alClient
+            Caption = 'Novo'
+            Flat = True
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWhite
+            Font.Height = -13
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            OnClick = SpeedButtonNovoClick
+            ExplicitLeft = 80
+            ExplicitTop = 8
+            ExplicitWidth = 23
+            ExplicitHeight = 22
+          end
+        end
+      end
+      object DBGridPesquisa: TDBGrid
+        Left = 0
+        Top = 63
+        Width = 746
+        Height = 268
+        Align = alClient
+        BorderStyle = bsNone
+        DataSource = DataSourceCadastro
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+        PopupMenu = PopupMenuGrid
+        TabOrder = 1
+        TitleFont.Charset = DEFAULT_CHARSET
+        TitleFont.Color = clWindowText
+        TitleFont.Height = -11
+        TitleFont.Name = 'Tahoma'
+        TitleFont.Style = []
+        OnDblClick = DBGridPesquisaDblClick
+      end
+    end
+  end
+  object DataSourceCadastro: TDataSource
+    Left = 112
+    Top = 96
+  end
+  object PopupMenuGrid: TPopupMenu
+    Left = 368
+    Top = 176
+    object Editar1: TMenuItem
+      Caption = 'Editar'
+      OnClick = Editar1Click
+    end
+    object Deletar1: TMenuItem
+      Caption = 'Deletar'
+      OnClick = Deletar1Click
+    end
+  end
+end
